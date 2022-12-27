@@ -1,0 +1,78 @@
+there are 3 types of scope in javascript 
+global scope 
+function scope
+blocking scope
+
+what is call apply bind ?
+it help us to borrowing function . so we can bore function from an object.
+Apply is very similar to the call function. The only difference is that in apply you can pass an array as an argument list.
+
+WHAT IS THIS KEY WORD IN JAVASCRIPT ?
+In JavaScript, the this keyword refers to an object.
+Which object depends on how this is being invoked (used or called).
+The this keyword refers to different objects depending on how it is used:
+
+In an object method, this refers to the object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+
+DIFERENCE BTW ARROW FUNCTION AND REGULAR FUNCTION
+arrow function is short code,arrow function have no argument binding, it canonot access arguments.
+it will show reference error. arrow function is not constructable. duplicate argu are not allow it show error.
+it has no own this.there will be no biniding for this function.
+
+
+WHAT IS MEMOIZATION ?
+memoization is like a catche it is use for perfomance optimization , we are storing a cast value like if you are
+ using a function then we are storing it returns value as a cashe ,
+ it is use to avoid re rendering problems in react. har bar function pai heavy calculations na ho
+. react mai ya usememo or use callback hooks in react .
+
+WHAT IS REST AND SPREAD OPERATORS?
+both are denoted by 3 dots like (...others) rest operator collector multiply element and it will condence it into the form of a new array element
+Spread operator it allow expresion to be expendible where multiply element and arg or expresions are expected.
+
+
+REACT 
+WHAT IS VIRTUAL DOM ?
+Virtual dom is a copy of dom . it is a virtual representation . when ever app is render first time
+ tree of react element is created and it is put into the memory and it is syn with the real dom
+when any prop or state change happen or like any update addition happen  then a second copy of virtual 
+dom is created then both of them compared with each other through algorithem call difficult alg
+and only the updated value send to the first copy of dom . so the first copy sync with the real dom
+only the real value send to the dom reconcilition.basically it improve the perfomnce of our application
+thats why react use virtual dom concept.
+
+what is advantages of react js ?
+first is virtual dom so the rendering of app is very fast.
+we use jsx in react so it help us to write react app very easiy ut help us to write html and js 
+together .
+one way data binding like parent to child data pass .
+we can make single page app in react js 
+
+what is context and redux ? 
+
+we use context hook which help us to declare the state globally if we talk about and if their is large 
+application then we use redux where we can just store all our global data in centralized store
+where every component can get data from .
+
+
+HOW REDUX WORKS ? 
+there is 3 core concept of redux action reducer and store .
+in store where all our application data is stored in the form of objective tree .
+action is like a clean javascript object that must have type attribute and the reducer is a 
+function that take two arg that is the state  and action based on what action we are dispatching
+like what action we want perform on our state then reducer will perform that action and it will
+return the new state thats howi redux work.
+
+WHAT IS HIGHER ORDER COMPONENTS ? 
+high order components wo comp jo dosry comp ko as a prop laita hai or ek alag sy comp
+return krta ho .
+WHAT IS LIFE CYCLE METHOD IN REACT JS ?
+there are 3 phases in react life cycle.
+mounting
+updateing
+unmounting
+
+
