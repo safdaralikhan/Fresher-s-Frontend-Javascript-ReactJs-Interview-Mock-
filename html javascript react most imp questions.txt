@@ -1,3 +1,4 @@
+********************HTML CSS*****************
 HTML VS HTML5
 HTML5 is the fifth version of HTML. Many elements are removed or modified from HTML5.
 Browser support: HTML5 has browser support. It means even if some browsers are not supporting HTML5 you will be able to load a webpage on that browser.
@@ -8,7 +9,68 @@ In HTML5, inline mathML and SVG can be used in a text, while in HTML it is not p
 HTML5 supports new types of form controls, such as date and time, email, number, category, title, Url, search, etc.
 Many elements have been introduced in HTML5. Some of the most important are time, audio, description, embed, fig, shape, footer, article, canvas, navy, output, section, source, track, video, etc.
 
+What are Semantic Elements?
+A semantic element clearly describes its meaning to both the browser and the developer.
+Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+
+Difference btw Position relative and absolute.
+
+Relative Position: Setting the top, right, bottom, and left properties of an element with position: 
+relative; property will cause it to adjust from its normal position. 
+The other objects or elements will not fill the gap.
+
+Absolute Position: An element with position: absolute; will cause it to adjust its position with respect to its parent.
+ If no parent is present, then it uses the document body as parent.
+
+WHAT IS FLEX BOX ?
+basically flexbox is a display property it help us to design the layout of website very easily.
+ without having to write so many positioning properties. in flex we use so many properties like flex direction justifycontent alighn item
+so it help us to make layout of website.
+
+What is BOX MODAL IN CSS ?
+Every element is surronding by invisible box. it has four layers content,padding,border,margin
+content in it actual content.
+padding is area btw content and border.
+margin  is the space btw the elements.
+
+
+
 **************JAVASCRIPT QUESTIONS***********
+WHAT IS EVENT LOOP ?
+ it a runtime modal which is present in the javascriptengine .event loop is similar to Asynchrounous await concept . event loop mai 2 cheezein main hoti hia call stack and queue stack .
+jb b koi aisa function call ho jis mai settimeout laga ho to sary kaam ek hongy lekin setime out wala jesy aye ga wp callstack mai apend hojayega
+lekin jb is mai time lagy ga to us ko webapi browser mai bej daiga or baki k kaam ho rhy hongy jb is ka time hojayega to is ko dubar queue stack
+mia push kr daingy us k bs ya daiky ga k call stack khali hogaya to setimeout waly kaam ko call stack mai push kr k kaam khatam hojayega.
+ 
+WHAT IS DOM ?
+dom stand for document object modal w. when browser or client send information to the server,then server send different type of data like
+html xml any kind of data when browser get that data then it convert into javascript object. it parse the html into javascript obj and
+store into memory. it structure is like a tree of nodes every node denote the html element.
+
+WHAT IS HOISTING ?
+we can access any varible and function before we have initialize them .it related to the memory allocation phase of the execution context.
+
+WHAT IS CLOSURES.
+it is a function  reference to its lexical env forexample ineer function k access to the parameter that declared in the outer func.
+
+what is callback hell?
+when one function has nested callback and .where every callback stating an argument which is the result of prev callback. to avoid callback hell
+problem theis is a promises in javascript. 
+
+HOW MANY PARAMETERS ARE PROMISES HAVE.
+it has 2 parameters resolve and reject.
+
+WHAT IS MAP FILTER AND REDUCE ?
+they are high order functions in javascript beacuse it takes another function as args
+The map() method is used for creating a new array from an existing one, applying a function to each one of the elements of the first array.
+filter the element of array that condi we provide inside it. it return same arrray . it length must be less then or equal to the input array.
+REDUCE it takes all the element of the array and mix it into a single final value. it takes 2 parameter that is the acumilatorand the current value.
+
+HOW MANY SCOPES ARE THERE IN JAVASCRIPT ? 
+Global scope local scope functional scope block scope .
+
+
 there are 3 types of scope in javascript 
 global scope 
 function scope
@@ -45,7 +107,8 @@ both are denoted by 3 dots like (...others) rest operator collector multiply ele
 Spread operator it allow expresion to be expendible where multiply element and arg or expresions are expected.
 
 
-REACT 
+*************REACT *************
+
 WHAT IS VIRTUAL DOM ?
 Virtual dom is a copy of dom . it is a virtual representation . when ever app is render first time
  tree of react element is created and it is put into the memory and it is syn with the real dom
