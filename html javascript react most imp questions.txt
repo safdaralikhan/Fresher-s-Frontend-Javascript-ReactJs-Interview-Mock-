@@ -1,3 +1,13 @@
+HTML VS HTML5
+HTML5 is the fifth version of HTML. Many elements are removed or modified from HTML5.
+Browser support: HTML5 has browser support. It means even if some browsers are not supporting HTML5 you will be able to load a webpage on that browser.
+Geolocation: HTML5 provides a geolocation feature. With the help of the geolocation feature, we can insert or implement maps on our web pages for example world maps, etc.
+HTML5 supports both audio and video while none of them were part of
+HTML cannot allow JavaScript to run within the web browser, while HTML5 provides full support for running JavaScript.
+In HTML5, inline mathML and SVG can be used in a text, while in HTML it is not possible.
+HTML5 supports new types of form controls, such as date and time, email, number, category, title, Url, search, etc.
+Many elements have been introduced in HTML5. Some of the most important are time, audio, description, embed, fig, shape, footer, article, canvas, navy, output, section, source, track, video, etc.
+
 **************JAVASCRIPT QUESTIONS***********
 there are 3 types of scope in javascript 
 global scope 
