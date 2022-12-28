@@ -1,3 +1,4 @@
+**************JAVASCRIPT QUESTIONS***********
 there are 3 types of scope in javascript 
 global scope 
 function scope
@@ -74,5 +75,15 @@ there are 3 phases in react life cycle.
 mounting
 updateing
 unmounting
+
+COMPONENTDIDMOUNT
+jb b koi component first time render ya load hoga ya chaly ga .
+Constructor b ek life cycle hai agr ap chaty ho k page load hony sy phely b kuch initialize ho
+to hum is k ander liky gy.
+Render b apny andr ek life cycle hai
+JSX is use for to write html in javascript. browser jsx nhe samjhta is liye humary pas transpiler ka
+concept hota ha.jis sy jsx convert hojata hai jis ko browseer samjhta hai.
+COMPONENTDIDUPDATE jb b koi cheez update hogi like state to ya chaly ga.
+COMPONENTWILLUNMOUNT jb b hum koi component ko remove kary gy to ya chaly ga.
 
 
