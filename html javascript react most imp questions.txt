@@ -140,6 +140,89 @@ function that take two arg that is the state  and action based on what action we
 like what action we want perform on our state then reducer will perform that action and it will
 return the new state thats howi redux work.
 
+REDUX TOOKIT MAIN POINTS
+
+Yeh kuch key features hain React Redux Toolkit ke:
+configureStore: Redux store ko setup karna bahut asaan ho jata hai. configureStore function use karke aap store ko configure kar sakte hain. Isme Redux DevTools Extension ka support bhi automatically hota hai.
+createSlice: createSlice function se aap ek slice reducer create kar sakte hain, jo state ko manage karta hai. Isse aapko action types, action creators, aur reducer functions likhne mein asaani hoti hai.
+immer Integration: React Redux Toolkit immer library ko bhi support karta hai, jisse state ko immutable tarike se update karna asaan ho jata hai.
+Thunk Middleware: Redux Toolkit built-in thunk middleware ko bhi support karta hai, jo asynchronous actions ko handle karne mein madadgar hota hai.
+Selectors: createSlice ke sath aap selectors bhi define kar sakte hain jo state ko query karne mein madad karte hain. Yeh aapko state ko component ke liye tayyar karne mein help karte hain.
+
+IMMER 
+Immer ek JavaScript library hai jo immutable data ko manipulate karne ko asaan banata hai. Immutability ka matlab hota hai ki ek baar data create ho jane ke baad usme koi bhi changes nahi kiye ja sakte hain. Agar aapko data mein kuch badlav karna hai toh aapko naye data ka ek copy banana hota hai. Immutability ka use state management mein aur data transformation mein common hai, khaaskar React aur Redux jaise libraries mein.
+
+REDUX THUNK
+Redux Thunk: Redux Thunk ek middleware hai jo Redux ko extend karta hai. Ye asynchronous actions ko handle karne mein madad karta hai. Asynchronous actions mein API calls ya async operations shamil ho sakte hain. Redux Thunk, action creators ko return functions allow karta hai jinmein aap async logic ko define kar sakte hain.
+REDUX TOOKIT
+Redux Toolkit: Redux Toolkit Redux ka ek official library hai jo development process ko simplify karta hai. Ye Redux store setup, reducer logic, immutability, aur performance optimizations jaise concepts ko asaan banata hai. Redux Toolkit mein default mein ek 'createSlice' function hai jo reducer logic ko ek compact tarike se define karne mein help karta hai.
+REDUX TOOLKIT USING STEPS
+sb sy phely is ko install karo {npm install @reduxjs/toolkit react-redux}
+is k bd store create karo is location mai src/app/store.js.
+store.js ka code.
+import { configureStore } from '@reduxjs/toolkit'
+export const store = configureStore({
+  reducer: {},
+})
+us k bd App.js ko wrape karo provider sy.
+import App from './App'
+import { store } from './app/store'
+import { Provider } from 'react-redux'
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+)
+us k bd is location mai createSlice banao (src/features/counter/counterSlice.js)
+counterstore ka code. is mai reducer bunta hai jis mai sari conditions use hoti ha.
+
+import { createSlice } from '@reduxjs/toolkit'
+import type { PayloadAction } from '@reduxjs/toolkit'
+
+
+
+const initialState = {
+  value: 0,
+}
+
+export const counterSlice = createSlice({
+  name: 'counter',
+  initialState,
+  reducers: {
+    increment: (state) => {
+      // Redux Toolkit allows us to write "mutating" logic in reducers. It
+      // doesn't actually mutate the state because it uses the Immer library,
+      // which detects changes to a "draft state" and produces a brand new
+      // immutable state based off those changes
+      state.value += 1
+    },
+    decrement: (state) => {
+      state.value -= 1
+    },
+    incrementByAmount: (state, action: PayloadAction<number>) => {
+      state.value += action.payload
+    },
+  },
+})
+
+// Action creators are generated for each case reducer function
+export const { increment, decrement, incrementByAmount } = counterSlice.actions
+
+export default counterSlice.reducer
+
+Controlled Component (Function Component):
+
+Controlled components mein input field ka value state se control hota hai. Har user input se state update hota hai aur woh value input field mein dikhai deta hai. Yahan ek controlled input field ka function component example hai:
+Uncontrolled Component (Function Component):
+
+Uncontrolled components mein input field ka value React state se directly control nahi hota. Inmein hum "ref" ka istemal karke input field ko access karte hain. Yahan ek uncontrolled input field ka function component example hai:
+
+Server-side rendering (SSR) ek technique hai jahan par web application ke content ko server taraf se generate kiya jata hai aur client-side par load hone se pehle hi puri ya kuch HTML content render hota hai. React aur Next.js dono frameworks mein server-side rendering ka support hota hai, lekin Next.js SSR ke liye specialize hua hai.
+
+Client-side rendering (CSR) ek web development technique hai jahan par web application ke content ka major part user ke device (browser) mein JavaScript ki madad se generate hota hai. Ismein, initial page load par server sirf HTML, CSS, aur JavaScript files provide karta hai, aur phir JavaScript client-side par load hota hai jo dynamic content ko render karta hai.
+
 WHAT IS HIGHER ORDER COMPONENTS ? 
 high order components wo comp jo dosry comp ko as a prop laita hai or ek alag sy comp
 return krta ho .
